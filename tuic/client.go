@@ -58,7 +58,6 @@ func NewClient(options ClientOptions) (*Client, error) {
 		DisablePathMTUDiscovery: !(runtime.GOOS == "windows" || runtime.GOOS == "linux" || runtime.GOOS == "android" || runtime.GOOS == "darwin"),
 		EnableDatagrams:         true,
 		MaxIncomingUniStreams:   1 << 60,
-		MaxIncomingStreams:      1 << 60,
 	}
 	switch options.CongestionControl {
 	case "":
